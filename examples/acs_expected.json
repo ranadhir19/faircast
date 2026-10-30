@@ -1,0 +1,101 @@
+{
+  "demo_a": {
+    "series": "ACSIncome CA eo_gap, fit 2014-2016",
+    "p_breach_by_horizon": [
+      0.5645,
+      0.7033,
+      0.7625
+    ],
+    "realised_2017": 0.0556334593454331,
+    "realised_breach": true
+  },
+  "demo_b": {
+    "series": "ACSEmployment CA eo_gap, fit 2014-2018",
+    "p_breach_by_horizon": [
+      0.0,
+      0.0
+    ],
+    "realised_2019": 0.0542384704383052,
+    "realised_breach": true
+  },
+  "benchmark": {
+    "n_series": 18,
+    "n_breaching": 5,
+    "n_already_breached": 6,
+    "rows": [
+      {
+        "method": "faircast",
+        "far_target": 0.05,
+        "achieved_far": 0.1429,
+        "coverage": 0.0,
+        "median_lead": 0.0
+      },
+      {
+        "method": "persistence",
+        "far_target": 0.05,
+        "achieved_far": 0.0714,
+        "coverage": 0.0,
+        "median_lead": 0.0
+      },
+      {
+        "method": "linear",
+        "far_target": 0.05,
+        "achieved_far": 0.0714,
+        "coverage": 0.0,
+        "median_lead": 0.0
+      },
+      {
+        "method": "faircast",
+        "far_target": 0.1,
+        "achieved_far": 0.1429,
+        "coverage": 0.0,
+        "median_lead": 0.0
+      },
+      {
+        "method": "persistence",
+        "far_target": 0.1,
+        "achieved_far": 0.0714,
+        "coverage": 0.0,
+        "median_lead": 0.0
+      },
+      {
+        "method": "linear",
+        "far_target": 0.1,
+        "achieved_far": 0.0714,
+        "coverage": 0.0,
+        "median_lead": 0.0
+      },
+      {
+        "method": "faircast",
+        "far_target": 0.2,
+        "achieved_far": 0.1429,
+        "coverage": 0.0,
+        "median_lead": 0.0
+      },
+      {
+        "method": "persistence",
+        "far_target": 0.2,
+        "achieved_far": 0.2143,
+        "coverage": 0.0,
+        "median_lead": 0.0
+      },
+      {
+        "method": "linear",
+        "far_target": 0.2,
+        "achieved_far": 0.2143,
+        "coverage": 0.0,
+        "median_lead": 0.0
+      }
+    ],
+    "brier": {
+      "faircast": 0.3191,
+      "linear": 0.3269,
+      "persistence": 0.3043
+    },
+    "verdicts": [
+      "FAR target 0.05: NO-SKILL \u2014 faircast median lead 0.0 does not exceed both trivial forecasters (persistence 0.0, linear 0.0) at matched FAR.",
+      "FAR target 0.10: NO-SKILL \u2014 faircast median lead 0.0 does not exceed both trivial forecasters (persistence 0.0, linear 0.0) at matched FAR.",
+      "FAR target 0.20: NO-SKILL \u2014 faircast median lead 0.0 does not exceed both trivial forecasters (persistence 0.0, linear 0.0) at matched FAR."
+    ]
+  }
+}
