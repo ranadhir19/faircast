@@ -18,6 +18,10 @@ baselines. Read [What this tool does not
 establish](#what-this-tool-does-not-establish) before quoting any
 number it produces.
 
+## Watch it built
+
+Built by the presenter of **[The Architect's AI Workshop](https://www.youtube.com/@ArchitectsAIWorkshop)** — the channel where AI systems are taken apart from *first principles on the whiteboard, built live in the editor, measured honestly*.
+
 ## Install
 
 ```bash
