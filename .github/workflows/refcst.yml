@@ -1,0 +1,32 @@
+name: scheduled-reforecast
+
+# Re-run the bundled ACS worked example on a schedule. In real use this
+# is the point of FairCast: a fairness series you monitor gets
+# re-forecast as each new period lands, and the report (with its
+# honesty box) is regenerated from current data rather than quoted
+# from an old snapshot.
+
+on:
+  schedule:
+    - cron: "17 9 1 * *"   # monthly, 09:17 UTC on the 1st
+  workflow_dispatch:
+
+jobs:
+  reforecast:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install FairCast
+        run: pip install -e .
+      - name: Re-run the ACS worked example
+        run: python examples/acs_example.py
+      - name: Archive the regenerated report
+        uses: actions/upload-artifact@v4
+        with:
+          name: acs-forecast-report
+          path: |
+            examples/acs_report.md
+            examples/acs_income_ca_fan.png
